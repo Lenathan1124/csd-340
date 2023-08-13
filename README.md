@@ -1,1 +1,4 @@
-# H1 hi
+#  CSD 340 Web Development with HTML and CSS
+## Contributors 
+- Professor Joseph Issa
+- Nathan Le
