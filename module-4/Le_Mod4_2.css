@@ -1,0 +1,25 @@
+.image-gallery {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top:10%;
+    text-align:center;
+    
+}
+h1 {
+    text-align:center;
+}
+#below {
+    text-align:right;
+}
+figcaption {
+    font-style:italic;
+}
+.left-image{
+    border: 1px solid black;
+}
+.middle-image {
+    border: 1px solid black;
+}   
+.right-image {
+    border: 1px solid black;
+}
