@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CSD 340 Web Development with HTML and CSS</title>
+        <meta charset="UTF-8">
+    </head>
+    <header>
+        <h1>Assignment 10.3: JavaScript - Part 2</h1>
+    </header>
+    <script>
+        function displayimage(imageFile){
+            var largerImage = document.getElementById("mainImage");
+            var newNode = document.createElement("img");
+            newNode.id = "mainImage";
+            newNode.src = imageFile;
+            newNode.alt = "Large Image";
+            newNode.className = "mainImage";
+            newNode.style.width = "300px";
+            newNode.style.height = "200px";
+            largerImage.parentNode.replaceChild(newNode, largerImage);
+
+        }
+    </script>
+    <body>
+        <br/>
+        <div>
+            <a href =#
+            onmouseover="smile.src='Happy.jpg';"
+            onmouseout="smile.src='Sad.jpg';"
+        >
+            <img border = 0 name = "smile" src = "Sad.jpg">
+        </a>
+        </div>
+    </body>
+</html>
