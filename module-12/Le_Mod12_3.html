@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+</head>
+<body>
+    <h1>Assignment 12.2: JavaScript - Part 4</h1>
+
+    <button id="topToBottom">Top to Bottom</button>
+    <button id="bottomToTop">Bottom to Top</button>
+    <Ol id="bookList"></Ol>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const books = [
+                "Harry Potter and the Sorcerer's Stone",
+                "Harry Potter and the Chamber of Secrets",
+                "Harry Potter and the Prisoner of Azkaban",
+                "Harry Potter and the Goblet of Fire",
+                "Harry Potter and the Order of the Phoenix",
+                "Harry Potter and the Half-Blood Prince",
+                "Harry Potter and the Deathly Hallows",
+                "A Game of Thrones",
+                "A Clash of Kings",
+                "A Storm of Swords 1 - Steel and Snow"
+            ];
+
+            function displayAscending() {
+                const sortedBooks = [...books].sort();
+                displayBooks(sortedBooks);
+            }
+
+            function displayDescending() {
+                const sortedBooks = [...books].sort().reverse();
+                displayBooks(sortedBooks);
+            }
+
+            function displayBooks(bookArray) {
+                const bookListElement = document.getElementById('bookList');
+                bookListElement.innerHTML = '';
+
+                bookArray.forEach(book => {
+                    const li = document.createElement('li');
+                    li.textContent = book;
+                    bookListElement.appendChild(li);
+                });
+            }
+
+            document.getElementById('topToBottom').addEventListener('click', displayAscending);
+            document.getElementById('bottomToTop').addEventListener('click', displayDescending);
+        });
+    </script>
+</body>
+</html>
